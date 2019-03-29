@@ -49,7 +49,9 @@ def _read_yaml(path):
 
 
 def read_params(path):
-    if path.endswith('.json'):
+    if path is None:
+        return {}
+    elif path.endswith('.json'):
         return _read_json(path)
     elif path.endswith(('.yml', '.yaml')):
         return _read_yaml(path)
