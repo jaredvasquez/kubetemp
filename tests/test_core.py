@@ -7,7 +7,9 @@ from kubetemp.core import (
     _read_json,
     _read_yaml,
     _render_template,
+    read_params,
     render_path,
+    write_output,
 )
 
 
@@ -69,10 +71,28 @@ def test_read_json():
     assert params['name'] == 'Tester'
 
 
-@pytest.mark.parametrize('ext', ['yaml', 'yml'])
+@pytest.mark.parametrize('ext', ['yml', 'yaml'])
 def test_read_yaml(ext):
     filepath = 'tests/files/params.{ext}'.format(**locals())
     params = _read_yaml(filepath)
+    assert len(params) == 2
+    assert set(params.keys()) == {'age', 'name'}
+    assert params['age'] == 30
+    assert params['name'] == 'Tester'
+
+
+@pytest.mark.parametrize('ext', ['json', 'yml', 'yaml'])
+def test_read_params(ext):
+    # Raise exception when extension is unknown
+    with pytest.raises(ValueError, match='known extension.$'):
+        read_params('unknown/file.ext')
+
+    # When path is None return empty dict
+    assert read_params(None) == {}
+
+    # Read from params from paths with supported extensions
+    filepath = 'tests/files/params.{ext}'.format(**locals())
+    params = read_params(filepath)
     assert len(params) == 2
     assert set(params.keys()) == {'age', 'name'}
     assert params['age'] == 30

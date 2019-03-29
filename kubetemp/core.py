@@ -54,7 +54,7 @@ def read_params(path):
     elif path.endswith(('.yml', '.yaml')):
         return _read_yaml(path)
     else:
-        raise ValueError(f'Path "{path}" does not have JSON or YAML extension')
+        raise ValueError(f'Path "{path}" does not have a known extension.')
 
 
 def write_output(output, path):
