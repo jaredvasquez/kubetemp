@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from kubetemp.version import AUTHOR, DESCRIPTION, PROJECT_NAME, URL, VERSION
+from kubetemp._info import AUTHOR, DESCRIPTION, PROJECT_NAME, URL, VERSION
 
 setup(
     name=PROJECT_NAME,
