@@ -12,7 +12,6 @@ deploy:
   skip_existing: true
   distributions: sdist bdist_wheel
   on:
-    tags: true
     branch: develop
   user: jaredv
   password:
