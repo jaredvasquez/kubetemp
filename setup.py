@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='kubetemp',
-    version='0.1.3',
+    version='0.1.4',
     author='Jared Vasquez',
     url='https://github.com/jgv7/kubetemp',
     long_description='https://github.com/jgv7/kubetemp',
