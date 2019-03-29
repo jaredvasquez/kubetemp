@@ -1,4 +1,7 @@
 # kubetemp
+
+[![Build Status](https://travis-ci.org/jgv7/kubetemp.svg?branch=master)](https://travis-ci.org/jgv7/kubetemp)
+
 Tool for generating kubernetes (k8s) manifests using Jinja templates.
 
 #### Installing kubetemp
