@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='kubetemp',
-    version='0.1.3',
+    version='0.1.4',
     author='Jared Vasquez',
     url='https://github.com/jgv7/kubetemp',
     long_description='https://github.com/jgv7/kubetemp',
@@ -13,7 +13,7 @@ setup(
     install_requires=[
         'Click>=7.0',
         'jinja2>=2.10',
-        'pyyaml',
+        'PyYAML<=3.13,>=3.10',
     ],
     packages=['kubetemp'],
     python_requires=">=3.6",
@@ -24,7 +24,7 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.7',
     ],
     zip_safe=False,
 )

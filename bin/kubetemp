@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import click
 
-from kubetemp import (read_params, render_path, write_output)
+from kubetemp import (read_params, render_string, write_output)
 
 
 @click.command()
-@click.argument('TEMPLATE', type=click.Path(exists=True))
+@click.argument('TEMPLATE', type=click.File('r')) 
 @click.option(
     'param_path', '--file', '-f', type=click.Path(exists=True),
     help='Read parameters from JSON or YAML file'
@@ -27,7 +27,7 @@ def _render_template(template, param_path, param_list, output_path):
     params.update(dict(param_list))
 
     # Render template and create output
-    rendered_output = render_path(template, **params)
+    rendered_output = render_string(template.read(), **params)
     if output_path is None:
         click.echo(rendered_output)
     else:
