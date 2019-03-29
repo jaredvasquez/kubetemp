@@ -1,3 +1,5 @@
+import uuid
+
 import pytest
 
 from jinja2 import Template
@@ -41,7 +43,6 @@ def test_load_template():
     # Test successfully loading a template
     temp = _load_template(TEMPLATE_PATH)
     assert isinstance(temp, Template)
-
 
 
 @pytest.fixture
@@ -97,3 +98,13 @@ def test_read_params(ext):
     assert set(params.keys()) == {'age', 'name'}
     assert params['age'] == 30
     assert params['name'] == 'Tester'
+
+
+def test_write_output(tmpdir):
+    # Write a unique hash to the output file
+    path = tmpdir.join('test-file.txt')
+    output_str = str(uuid.uuid4())
+    write_output(output_str, str(path))
+
+    # Output file should match the unique hash we wrote
+    assert path.read() == output_str
