@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-
 import click
 
-from kubetemp import (read_params, render_path, update_params, write_output)
+from kubetemp import (read_params, render_path, write_output)
 
 
 @click.command()
@@ -11,15 +10,17 @@ from kubetemp import (read_params, render_path, update_params, write_output)
 @click.option('param_list', '--param', '-p', nargs=2, multiple=True, type=str)
 @click.option('output_path', '--output', '-o', type=click.Path(writable=True))
 def _render_template(template, param_path, param_list, output_path):
+    # Get template parameters
     params = {}
     file_params = read_params(param_path)
-    update_params(params, file_params)
-    update_params(params, dict(param_list))
+    params.update(file_params)
+    params.update(dict(param_list))
+
+    # Render template and create output
     rendered_output = render_path(template, **params)
     if output_path is None:
-        print(rendered_output)
+        click.echo(rendered_output)
     else:
-        print(f'Writing output to {output_path}')
         write_output(rendered_output, output_path)
 
 
