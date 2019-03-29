@@ -40,7 +40,7 @@ def _read_yaml(path):
     """ Read YAML file from path """
     _check_valid_path(path)
     with open(path) as _file:
-        return yaml.load(_file)
+        return yaml.safe_load(_file)
 
 
 def read_params(path):
