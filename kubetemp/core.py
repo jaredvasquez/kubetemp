@@ -6,6 +6,7 @@ import yaml
 
 
 def _check_valid_path(path):
+    """ Ensure that path exists and is a file """
     if not os.path.exists(path):
         raise ValueError(f'Path "{path}" does not exist.')
     if not os.path.isfile(path):
@@ -57,5 +58,6 @@ def read_params(path):
 
 
 def write_output(output, path):
+    """ Write output string to file at path """
     with open(path, 'w') as _file:
         _file.write(output)
