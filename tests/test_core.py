@@ -52,14 +52,14 @@ def test_template():
 
 @pytest.mark.parametrize('name', ['Joe', 'John', 'Jim', 123, '', None])
 def test_render_template(test_template, name):
-    expected = 'Hello, {name}!'.format(**locals())
+    expected = f'Hello, {name}!'
     result = _render_template(test_template, **locals())
     assert result == expected
 
 
 @pytest.mark.parametrize('name', ['Joe', 'John', 'Jim', 123, '', None])
 def test_render_path(name):
-    expected = 'Hello, {name}!'.format(**locals())
+    expected = f'Hello, {name}!'
     result = render_path(TEMPLATE_PATH, **locals())
     assert result == expected
 
@@ -74,7 +74,7 @@ def test_read_json():
 
 @pytest.mark.parametrize('ext', ['yml', 'yaml'])
 def test_read_yaml(ext):
-    filepath = 'tests/files/params.{ext}'.format(**locals())
+    filepath = f'tests/files/params.{ext}'
     params = _read_yaml(filepath)
     assert len(params) == 2
     assert set(params.keys()) == {'age', 'name'}
@@ -92,7 +92,7 @@ def test_read_params(ext):
     assert read_params(None) == {}
 
     # Read from params from paths with supported extensions
-    filepath = 'tests/files/params.{ext}'.format(**locals())
+    filepath = f'tests/files/params.{ext}'
     params = read_params(filepath)
     assert len(params) == 2
     assert set(params.keys()) == {'age', 'name'}
