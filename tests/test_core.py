@@ -10,12 +10,12 @@ from kubetemp.core import (
     _read_yaml,
     _render_template,
     read_params,
-    render_path,
+    render_string,
     write_output,
 )
 
 
-TEMPLATE_PATH = 'tests/files/test1.tmpl'
+TEMPLATE_STR = 'Hello, {{name}}!'
 
 
 def test_check_valid_path():
@@ -28,26 +28,18 @@ def test_check_valid_path():
         _check_valid_path('tests/files')
 
     # Do nothing when path is fine
-    _check_valid_path(TEMPLATE_PATH)
+    _check_valid_path('tests/test_core.py')
 
 
 def test_load_template():
-    # Raise exception when path does not exist
-    with pytest.raises(ValueError, match='does not exist.$'):
-        _load_template('path/does/not/exist')
-
-    # Raise exception when path is not a file
-    with pytest.raises(TypeError, match='is not a file.$'):
-        _load_template('tests/files')
-
     # Test successfully loading a template
-    temp = _load_template(TEMPLATE_PATH)
+    temp = _load_template(TEMPLATE_STR)
     assert isinstance(temp, Template)
 
 
 @pytest.fixture
 def test_template():
-    return _load_template(TEMPLATE_PATH)
+    return _load_template(TEMPLATE_STR)
 
 
 @pytest.mark.parametrize('name', ['Joe', 'John', 'Jim', 123, '', None])
@@ -58,9 +50,9 @@ def test_render_template(test_template, name):
 
 
 @pytest.mark.parametrize('name', ['Joe', 'John', 'Jim', 123, '', None])
-def test_render_path(name):
+def test_render_string(name):
     expected = f'Hello, {name}!'
-    result = render_path(TEMPLATE_PATH, **locals())
+    result = render_string(TEMPLATE_STR, **locals())
     assert result == expected
 
 

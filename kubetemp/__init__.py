@@ -1,1 +1,1 @@
-from .core import read_params, render_path, write_output
+from .core import read_params, render_string, write_output
