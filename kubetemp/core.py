@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 
 from jinja2 import Template
 import yaml

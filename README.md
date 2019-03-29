@@ -1,2 +1,2 @@
 # kubetemp
-Tool for generating manifests from JINJA templates.
+Tool for generating k8s manifests using JINJA templates.
