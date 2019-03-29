@@ -6,10 +6,20 @@ from kubetemp import (read_params, render_path, write_output)
 
 @click.command()
 @click.argument('TEMPLATE', type=click.Path(exists=True))
-@click.option('param_path', '--file', '-f', type=click.Path(exists=True))
-@click.option('param_list', '--param', '-p', nargs=2, multiple=True, type=str)
-@click.option('output_path', '--output', '-o', type=click.Path(writable=True))
+@click.option(
+    'param_path', '--file', '-f', type=click.Path(exists=True),
+    help='Read parameters from JSON or YAML file'
+)
+@click.option(
+    'param_list', '--param', '-p', nargs=2, multiple=True, type=str,
+    help='Define parameters to render template'
+)
+@click.option(
+    'output_path', '--output', '-o', type=click.Path(writable=True),
+    help='Write rendered template to output file'
+)
 def _render_template(template, param_path, param_list, output_path):
+    """ Renders Jinja template with parameters"""
     # Get template parameters
     params = {}
     file_params = read_params(param_path)
