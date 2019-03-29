@@ -4,7 +4,7 @@ from kubetemp._info import AUTHOR, DESCRIPTION, PROJECT_NAME, URL, VERSION
 
 setup(
     name='kubetemp',
-    version='0.1.1',
+    version='0.1.2',
     author='Jared Vasquez',
     url='https://github.com/jgv7/kubetemp',
     long_description='https://github.com/jgv7/kubetemp',
