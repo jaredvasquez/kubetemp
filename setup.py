@@ -2,12 +2,13 @@ from setuptools import setup
 
 setup(
     name='kubetemp',
-    version='0.1.1',
+    version='0.1.2',
     author='Jared Vasquez',
+    url='https://github.com/jgv7/kubetemp',
+    long_description='https://github.com/jgv7/kubetemp',
     description=(
         'Tool for generating kubernetes (k8s) manifests using Jinja templates.'
     ),
-    url='https://github.com/jgv7/kubetemp',
     license='MIT',
     install_requires=[
         'Click>=7.0',
