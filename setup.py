@@ -1,7 +1,5 @@
 from setuptools import setup
 
-from kubetemp._info import AUTHOR, DESCRIPTION, PROJECT_NAME, URL, VERSION
-
 setup(
     name='kubetemp',
     version='0.1.2',
