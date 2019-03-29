@@ -66,3 +66,10 @@ results will be output to STDOUT.
 ```
 kubetemp template-file.yaml -p parameters.yaml -o output-rendered.yaml
 ```
+
+Templates can also be provided via STDIN by using "-" inplace of a template
+filepath
+
+```
+cat template-file.yaml | kubetemp - -p IMAGE docker/myimage -p TAG 0.2.7
+```
