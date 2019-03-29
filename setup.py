@@ -8,6 +8,7 @@ setup(
     author='Jared Vasquez',
     license='MIT',
     packages=['kubetemp'],
+    scripts=['bin/kubetemp'],
     install_requires=[
         'Click>=7.0',
         'jinja2>=2.10',
