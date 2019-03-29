@@ -1,5 +1,5 @@
 # kubetemp
-Tool for generating kubernetes manifests using JINJA templates.
+Tool for generating kubernetes (k8s) manifests using Jinja templates.
 
 #### Installing kubetemp
 Kubetemp requires Python 3.6 or greater and can be installed by pip:
