@@ -9,7 +9,7 @@ def _check_valid_path(path):
     if not os.path.exists(path):
         raise ValueError(f'Path "{path}" does not exist.')
     if not os.path.isfile(path):
-        raise ValueError(f'Path "{path}" is not a file.')
+        raise TypeError(f'Path "{path}" is not a file.')
 
 
 def _load_template(path):
