@@ -1,13 +1,13 @@
 # kubetemp
 Tool for generating kubernetes manifests using JINJA templates.
 
-### Installing kubetemp
+#### Installing kubetemp
 Kubetemp required Python 3.6 or greater and can be installed by pip:
 ```
 pip install kubetemp
 ```
 
-### Local installation 
+#### Local installation 
 To install the `kubetemp` package locally, simply run:
 ```
 pip install .
