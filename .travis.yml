@@ -12,7 +12,8 @@ deploy:
   skip_existing: true
   distributions: sdist bdist_wheel
   on:
-    branch: develop
+    tags: true
+    branch: master
   user: jaredv
   password:
     secure: ddSuJJqIVIVJDyCzCc7ZGcsc4kqumIzi4kipGanzlOmLLIJKmt6QnwaOQ/ibeaAFWzc0vMKsDpVS/1m4D262wnb4qsJaC6E38AzaLRLxO+pqYwOrBN+WlCF/M9/3+J62TUsRYQHIUQ4WOF8qnGq+MKB79ROANCpchoV3xctC8hxpqLPn5+qT58gBBoIfJ0qgAkVrLAvkPOVXVAUl28IzJgEa0/oCDKxiatsfOgJfgwNIckL8R83QfZmdDqh01RvTZ7eTGs3PwnzOyjn46IJEv0uV8kau5FyEPi714To20d33vilCfiAknYdm38/t7tYZ9+IAdN28eXmSzEvuP+BOoGxtLZDJeENTr1cU7LIHfkJPnHNrWtqAfQMNbF954oJ3IfXZu5LjPCFtWYkBnjEEFvn6i4iwLSVpbQInDO+EYRF2gHa86sGQ6nWMbgB2KhRl9jXRJZ4RjQRgIPf40Ye905kVk0DchKX3ZDo/a/+NbSxTEPIjYl4DWrnqEEVop2r4tD+GwWXpBvKZgW2jDdFoQIjpHW5jdz4a7jyEjruB2EB6nxzrl45OfP6ynqyfvV3iTYZlH+tl+D6eWDIxIcBBPM6oCzU0FWzoR3NtZGKv8TXft5MAe9tCqGw+GCojT0OCvERVgm76uUbMRPszT4QbBD4TP1JqJPILFOq+cAsyWiM=
