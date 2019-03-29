@@ -2,7 +2,7 @@
 Tool for generating kubernetes manifests using JINJA templates.
 
 #### Installing kubetemp
-Kubetemp required Python 3.6 or greater and can be installed by pip:
+Kubetemp requires Python 3.6 or greater and can be installed by pip:
 ```
 pip install kubetemp
 ```
