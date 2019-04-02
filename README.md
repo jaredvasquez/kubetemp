@@ -1,6 +1,8 @@
 # kubetemp
 
 [![Build Status](https://travis-ci.org/jgv7/kubetemp.svg?branch=master)](https://travis-ci.org/jgv7/kubetemp)
+[![PyPI version](https://badge.fury.io/py/kubetemp.svg)](https://badge.fury.io/py/kubetemp)
+[![pypi supported versions](https://img.shields.io/pypi/pyversions/kubetemp.svg)](https://pypi.python.org/pypi/kubetemp)
 
 Tool for generating kubernetes (k8s) manifests using Jinja templates.
 
