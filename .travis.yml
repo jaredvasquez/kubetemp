@@ -8,9 +8,11 @@ install:
   - pip install pytest-cov==2.6.1
   - pip install coveralls==1.7.0
   - pip install flake8==3.6.0
+  - pip install black==19.3b0
 script:
   - pytest --cov=kubetemp/
   - flake8 --exclude=__init__.py .
+  - black --check -l 79 -t py36 .
 after_success:
   - coveralls
 deploy:
