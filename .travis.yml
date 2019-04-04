@@ -7,8 +7,10 @@ install:
   - pip install -e .
   - pip install pytest-cov==2.6.1
   - pip install coveralls==1.7.0
+  - pip install flake8==3.6.0
 script:
   - pytest --cov=kubetemp/
+  - flake8 --exclude=__init__.py .
 after_success:
   - coveralls
 deploy:
