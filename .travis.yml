@@ -13,8 +13,6 @@ script:
   - flake8 --exclude=__init__.py .
 after_success:
   - coveralls
-  - sed -i "s/'dev'/'${TRAVIS_BRANCH}'/g" setup.py
-  - cat setup.py
 deploy:
   provider: pypi
   skip_existing: true
