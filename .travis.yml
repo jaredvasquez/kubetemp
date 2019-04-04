@@ -13,8 +13,9 @@ script:
   - flake8 --exclude=__init__.py .
 after_success:
   - coveralls
+before_deploy:
   - sed -i "s/'dev'/'${TRAVIS_BRANCH}'/g" setup.py
-  - git add setup.py && git commit -m 'setting pypi version'
+  - git add setup.py && git commit -m 'setting package version'
 deploy:
   provider: pypi
   skip_existing: true
