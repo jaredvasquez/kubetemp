@@ -1,6 +1,6 @@
+import os
 import uuid
 
-import click
 from click.testing import CliRunner
 import pytest
 
