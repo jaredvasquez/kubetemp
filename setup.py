@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='kubetemp',
-    version='0.2.2',
+    version='0.2.3',
     author='Jared Vasquez',
     url='https://github.com/jgv7/kubetemp',
     long_description='https://github.com/jgv7/kubetemp',
@@ -17,7 +17,10 @@ setup(
     ],
     packages=['kubetemp'],
     python_requires=">=3.6",
-    scripts=['bin/kubetemp'],
+    entry_points='''
+        [console_scripts]
+        kubetemp=kubetemp.cli:cli
+    ''',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

@@ -3,7 +3,7 @@ import uuid
 from click.testing import CliRunner
 import pytest
 
-from kubetemp.cli import _render_template
+from kubetemp.cli import cli
 
 
 @pytest.fixture
@@ -14,7 +14,7 @@ def runner():
 @pytest.mark.parametrize('name', ['Joe', 'John', 'Jim', 123, ''])
 def test_param_arguments(runner, name):
     result = runner.invoke(
-        _render_template,
+        cli,
         ['tests/files/test.tmpl', '-p', 'name', name]
     )
     assert result.exit_code == 0
@@ -24,7 +24,7 @@ def test_param_arguments(runner, name):
 @pytest.mark.parametrize('ext', ['json', 'yaml', 'yml'])
 def test_params_from_file(runner, ext):
     result = runner.invoke(
-        _render_template,
+        cli,
         ['tests/files/test.tmpl', '-f', f'tests/files/params.{ext}']
     )
     assert result.exit_code == 0
@@ -34,7 +34,7 @@ def test_params_from_file(runner, ext):
 @pytest.mark.parametrize('ext', ['json', 'yaml', 'yml'])
 def test_override_cli_params(runner, ext):
     result = runner.invoke(
-        _render_template,
+        cli,
         [
             'tests/files/test.tmpl',
             '-f', f'tests/files/params.{ext}',
@@ -48,7 +48,7 @@ def test_override_cli_params(runner, ext):
 @pytest.mark.parametrize('name', ['Joe', 'John', 'Jim', 123, ''])
 def test_stdin_template(runner, name):
     result = runner.invoke(
-        _render_template,
+        cli,
         ['-', '-p', 'name', name],
         input=f'How are you, {name}?'
     )
@@ -60,7 +60,7 @@ def test_write_output(runner, tmpdir):
     path = tmpdir.join('test.txt')
     hash_str = str(uuid.uuid4())
     result = runner.invoke(
-        _render_template,
+        cli,
         [
             'tests/files/test.tmpl',
             '-p', 'name', hash_str,
