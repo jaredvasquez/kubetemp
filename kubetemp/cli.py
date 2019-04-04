@@ -1,6 +1,6 @@
 import click
 
-from kubetemp import read_params, render_string, write_output
+from kubetemp.core import read_params, render_string, write_output
 
 
 @click.command()
