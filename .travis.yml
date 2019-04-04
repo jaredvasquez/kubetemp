@@ -14,6 +14,7 @@ script:
 after_success:
   - coveralls
   - sed -i "s/'dev'/'${TRAVIS_TAG}'/g" setup.py
+  - echo "Will be tagging package with version: ${TRAVIS_TAG}"
 deploy:
   provider: pypi
   skip_existing: true
