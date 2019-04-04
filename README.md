@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/jgv7/kubetemp/badge.svg)](https://coveralls.io/github/jgv7/kubetemp)
 [![PyPI version](https://badge.fury.io/py/kubetemp.svg)](https://badge.fury.io/py/kubetemp)
 [![pypi supported versions](https://img.shields.io/pypi/pyversions/kubetemp.svg)](https://pypi.python.org/pypi/kubetemp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Tool for generating kubernetes (k8s) manifests using Jinja templates.
 
