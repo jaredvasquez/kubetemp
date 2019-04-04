@@ -47,9 +47,9 @@ def read_params(path):
     """ Read parameters from JSON or YAML file path """
     if path is None:
         return {}
-    elif path.endswith('.json'):
+    elif path.endswith(".json"):
         return _read_json(path)
-    elif path.endswith(('.yml', '.yaml')):
+    elif path.endswith((".yml", ".yaml")):
         return _read_yaml(path)
     else:
         raise ValueError(f'Path "{path}" does not have a known extension.')
@@ -57,5 +57,5 @@ def read_params(path):
 
 def write_output(output, path):
     """ Write output string to file at path """
-    with open(path, 'w') as _file:
+    with open(path, "w") as _file:
         _file.write(output)
