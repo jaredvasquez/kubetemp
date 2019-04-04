@@ -17,7 +17,10 @@ setup(
     ],
     packages=['kubetemp'],
     python_requires=">=3.6",
-    scripts=['bin/kubetemp'],
+    entry_points='''
+        [console_scripts]
+        kubetemp=kubetemp.cli:_render_template
+    ''',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
