@@ -1,4 +1,3 @@
-import os
 import uuid
 
 from click.testing import CliRunner
