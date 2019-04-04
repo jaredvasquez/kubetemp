@@ -19,7 +19,7 @@ setup(
     python_requires=">=3.6",
     entry_points='''
         [console_scripts]
-        kubetemp=kubetemp.cli:_render_template
+        kubetemp=kubetemp.cli:cli
     ''',
     classifiers=[
         'Development Status :: 4 - Beta',

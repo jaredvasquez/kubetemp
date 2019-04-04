@@ -17,7 +17,7 @@ from kubetemp import read_params, render_string, write_output
     'output_path', '--output', '-o', type=click.Path(writable=True),
     help='Write rendered template to output file'
 )
-def _render_template(template, param_path, param_list, output_path):
+def cli(template, param_path, param_list, output_path):
     """ Renders Jinja template with parameters"""
     # Get template parameters
     params = {}
