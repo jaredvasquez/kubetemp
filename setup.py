@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='kubetemp',
-    version='0.2.3',
+    version='dev',    # PyPI version automatically set by Travis CI
     author='Jared Vasquez',
     url='https://github.com/jgv7/kubetemp',
     long_description='https://github.com/jgv7/kubetemp',
