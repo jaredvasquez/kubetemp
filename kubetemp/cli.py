@@ -4,6 +4,7 @@ from kubetemp import read_params, render_string, write_output
 
 
 @click.command()
+@click.version_option()
 @click.argument('TEMPLATE', type=click.File('r'))
 @click.option(
     'param_path', '--file', '-f', type=click.Path(exists=True),
