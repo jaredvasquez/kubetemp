@@ -12,7 +12,7 @@ install:
 script:
   - pytest --cov=kubetemp/
   - flake8 --exclude=__init__.py .
-  - black --check -l 79 -t py36 .
+  - black --check -l 79 --py36 .
 after_success:
   - coveralls
 deploy:
