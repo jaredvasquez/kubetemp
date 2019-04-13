@@ -23,10 +23,13 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install -e .
   displayName: 'Install dependencies'
+
+- script: |
+    pip install -e .
+  displayName: 'Install package'
 
 - script: |
     pip install pytest pytest-azurepipelines
     pytest
-  displayName: 'Run Tests'
+  displayName: 'Run tests'
