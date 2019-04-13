@@ -16,7 +16,7 @@ setup(
         'PyYAML<=3.13,>=3.10',
     ],
     packages=['kubetemp'],
-    python_requires=">=3.6",
+    python_requires=">=3.5",
     entry_points='''
         [console_scripts]
         kubetemp=kubetemp.cli:cli
