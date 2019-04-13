@@ -1,5 +1,7 @@
 # kubetemp
 
+[![Azure Pipelines](https://img.shields.io/azure-devops/build/jaredvasquez/kubetemp/1/master.svg?logo=azure-devops)](https://dev.azure.com/jaredvasquez/kubetemp/_build?definitionId=1)
+[![Travis Build Status](https://img.shields.io/travis/jgv7/kubetemp/master.svg?logo=travis)](https://travis-ci.org/jgv7/kubetemp)
 [![Build Status](https://travis-ci.org/jgv7/kubetemp.svg?branch=master)](https://travis-ci.org/jgv7/kubetemp)
 [![Coverage Status](https://coveralls.io/repos/github/jgv7/kubetemp/badge.svg)](https://coveralls.io/github/jgv7/kubetemp)
 [![Updates](https://pyup.io/repos/github/jgv7/kubetemp/shield.svg)](https://pyup.io/repos/github/pyupio/pyup/)
