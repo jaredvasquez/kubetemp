@@ -1,9 +1,9 @@
 # kubetemp
 
-[![Azure Build Status](https://dev.azure.com/jaredvasquez/kubetemp/_apis/build/status/jgv7.kubetemp?branchName=master)](https://dev.azure.com/jaredvasquez/kubetemp/_build/latest?definitionId=2&branchName=master)
-[![Travis Build Status](https://img.shields.io/travis/jgv7/kubetemp/master.svg?logo=travis)](https://travis-ci.org/jgv7/kubetemp)
-[![Coverage Status](https://coveralls.io/repos/github/jgv7/kubetemp/badge.svg)](https://coveralls.io/github/jgv7/kubetemp)
-[![Updates](https://pyup.io/repos/github/jgv7/kubetemp/shield.svg)](https://pyup.io/repos/github/pyupio/pyup/)
+[![Azure Build Status](https://dev.azure.com/jaredvasquez/kubetemp/_apis/build/status/jaredvasquez.kubetemp?branchName=master)](https://dev.azure.com/jaredvasquez/kubetemp/_build/latest?definitionId=2&branchName=master)
+[![Travis Build Status](https://img.shields.io/travis/jaredvasquez/kubetemp/master.svg?logo=travis)](https://travis-ci.org/jaredvasquez/kubetemp)
+[![Coverage Status](https://coveralls.io/repos/github/jaredvasquez/kubetemp/badge.svg)](https://coveralls.io/github/jaredvasquez/kubetemp)
+[![Updates](https://pyup.io/repos/github/jaredvasquez/kubetemp/shield.svg)](https://pyup.io/repos/github/pyupio/pyup/)
 [![PyPI version](https://badge.fury.io/py/kubetemp.svg)](https://badge.fury.io/py/kubetemp)
 [![pypi supported versions](https://img.shields.io/pypi/pyversions/kubetemp.svg)](https://pypi.python.org/pypi/kubetemp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
